@@ -1,0 +1,274 @@
+/* Estilos generales */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #f0e6ff; /* Fondo contrastante en tono púrpura claro */
+  background-image: linear-gradient(135deg, #f0e6ff 0%, #d8c8ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.resume-wrapper {
+  display: flex;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Columna izquierda */
+.left-column {
+  width: 40%;
+  background-color: #222;
+  color: #fff;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-section {
+  background-color: #ff9800;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.profile-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-section,
+.award-section,
+.contact-section {
+  padding: 30px;
+}
+
+.about-section h2,
+.award-section h2,
+.contact-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-section p,
+.award-section p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.award-item {
+  margin-bottom: 20px;
+}
+
+.award-item h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #ff9800;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-item i {
+  margin-right: 15px;
+  color: #ff9800;
+  font-size: 1.2rem;
+}
+
+.contact-item p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* Columna derecha */
+.right-column {
+  width: 60%;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.header span {
+  color: #ff9800;
+}
+
+.header h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.header-line {
+  width: 70px;
+  height: 4px;
+  background-color: #ff9800;
+}
+
+.experience-section,
+.education-section,
+.video-section,
+.references-section {
+  margin-bottom: 40px;
+}
+
+.experience-section h2,
+.education-section h2,
+.video-section h2,
+.references-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 25px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: #ff9800;
+  border-radius: 50%;
+}
+
+.timeline-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.timeline-content p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Sección de video */
+.video-container {
+  margin-top: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.video-container video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.video-note {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Estilos para los controles del video */
+video::-webkit-media-controls {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.reference-item {
+  margin-bottom: 20px;
+}
+
+.reference-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.reference-item p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resume-wrapper {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .photo-section {
+    padding: 20px;
+  }
+
+  .profile-img {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media print {
+  body {
+    padding: 0;
+    background-color: #fff;
+    background-image: none;
+  }
+
+  .container {
+    max-width: 100%;
+    box-shadow: none;
+  }
+
+  .resume-wrapper {
+    box-shadow: none;
+  }
+}
